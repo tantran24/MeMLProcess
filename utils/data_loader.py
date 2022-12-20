@@ -11,14 +11,16 @@ def preprocess_data(df):
 def load_data(data_path):
     df = pd.read_csv(data_path)
     # sbn.pairplot(data=df, hue='Weight')
-    X = df.drop(columns = ['Weight'])
-    y = df['Weight']
-    X = preprocess_data(X)
     
+    X = df.drop(columns = ['Weight'])
+    X = preprocess_data(X)
+    y = df['Weight']
+
     
     X_train, X_test, y_train, y_test = train_test_split(X, y, random_state = 2003)
 
     return X_train, X_test, y_train, y_test 
+
 
 
 
