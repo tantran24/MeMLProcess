@@ -11,4 +11,5 @@ class linear_regression(BaseModel):
         self.model.fit(X, y)
 
     def predict(self, X):
-        return self.model.predict(X)
+        self.model.predict(X)
+

@@ -18,14 +18,14 @@ def train(data_path):
     
     model.fit(X_train, y_train)
     y_predict = model.predict(X_train)
-    
-    plt.scatter(np.arange(0, y_train.shape[0], 1), y_train,  label = 'y^')
-    plt.scatter(np.arange(0, y_predict.shape[0], 1), y_predict, label = 'y_predict', color = 'red')
-    plt.title('y_predict vs y^')
-    plt.xlabel('samples')
-    plt.ylabel('y')
-    plt.legend(loc='best')
-    plt.show()
+    type(y_train)
+    # plt.scatter(np.arange(0, y_train.shape[0], 1), y_train,  label = 'y^')
+    # plt.scatter(np.arange(0, y_predict.shape[0], 1), y_predict, label = 'y_predict', color = 'red')
+    # plt.title('y_predict vs y^')
+    # plt.xlabel('samples')
+    # plt.ylabel('y')
+    # plt.legend(loc='best')
+    # plt.show()
     print('MSE on trainset : {}'.format(MSE(y_train, y_predict)))
 
     y_predict = model.predict(X_test)
